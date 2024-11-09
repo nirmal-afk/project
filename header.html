@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Admin</title>
+    <meta
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+      name="viewport"
+    />
+    <link
+      rel="icon"
+      href="assets/img/kaiadmin/favicon.ico"
+      type="image/x-icon"
+    />
+
+    <!-- Fonts and icons -->
+    <script src="assets/js/plugin/webfont/webfont.min.js"></script>
+    <script>
+      WebFont.load({
+        google: { families: ["Public Sans:300,400,500,600,700"] },
+        custom: {
+          families: [
+            "Font Awesome 5 Solid",
+            "Font Awesome 5 Regular",
+            "Font Awesome 5 Brands",
+            "simple-line-icons",
+          ],
+          urls: ["assets/css/fonts.min.css"],
+        },
+        active: function () {
+          sessionStorage.fonts = true;
+        },
+      });
+    </script>
+
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="assets/css/plugins.min.css" />
+    <link rel="stylesheet" href="assets/css/kaiadmin.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <!-- CSS Just for demo purpose, don't include it in your project -->
+    <link rel="stylesheet" href="assets/css/demo.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <!-- Sidebar -->
+      <div class="sidebar" data-background-color="dark">
+        <div class="sidebar-logo">
+          <!-- Logo Header -->
+          <div class="logo-header" data-background-color="dark">
+            <a href="widgets.php" class="logo">
+              <img
+                src="assets/img/kaiadmin/logo_light.svg"
+                alt="navbar brand"
+                class="navbar-brand"
+                height="20"
+              />
+            </a>
+            <div class="nav-toggle">
+              <button class="btn btn-toggle toggle-sidebar">
+                <i class="gg-menu-right"></i>
+              </button>
+              <button class="btn btn-toggle sidenav-toggler">
+                <i class="gg-menu-left"></i>
+              </button>
+            </div>
+            <button class="topbar-toggler more">
+              <i class="gg-more-vertical-alt"></i>
+            </button>
+          </div>
+          <!-- End Logo Header -->
+        </div>
+        <div class="sidebar-wrapper scrollbar scrollbar-inner">
+          <div class="sidebar-content">
+            <ul class="nav nav-secondary">
+            <li class="nav-item active">
+    <a
+        href="#"
+        data-bs-toggle="collapse"
+        class="collapsed"
+        aria-expanded="false"
+        onclick="window.location='widgets.php';"
+    >
+        <i class="fas fa-home"></i>
+        <p>Dashboard</p>
+    </a>
+    <div class="collapse" id="dashboard">
+        <!-- Collapsible content goes here -->
+    </div>
+</li>
+
+              <li class="nav-section">
+                <span class="sidebar-mini-icon">
+                  <i class="fa fa-ellipsis-h"></i>
+                </span>
+                <h4 class="text-section">Options</h4>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#base">
+                <i class="fa-solid fa-school"></i>
+                  <p>Academic</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="base">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="course.php">
+                        <span class="sub-item">Add Course</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewcourse.php">
+                        <span class="sub-item">View Course</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="batch.php">
+                        <span class="sub-item">Add Batch</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewbatch.php">
+                        <span class="sub-item">View Batch</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarLayout">
+                <i class="fa-solid fa-graduation-cap"></i>
+                  <p>Students</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="sidebarLayout">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="student.php">
+                        <span class="sub-item">Add Student</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewstudent.php">
+                        <span class="sub-item">View Student</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#sidebarLayouts">
+                <i class="fa-solid fa-chalkboard-user"></i>
+                  <p>Teachers</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="sidebarLayouts">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="teacher.php">
+                        <span class="sub-item">Add Teachers</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewteacher.php">
+                        <span class="sub-item">View Teachers</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#forms">
+                  <i class="fas fa-pen-square"></i>
+                  <p>Attendance</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="forms">
+                  <ul class="nav nav-collapse">
+                  <li>
+                      <a href="attendance.php">
+                        <span class="sub-item">Add Attendance</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewattendance.php">
+                        <span class="sub-item">View Attendance</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#tables">
+                <i class="fa-solid fa-marker"></i>
+                  <p>Marks</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="tables">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="mark.php">
+                        <span class="sub-item">Add Marks</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewmark.php">
+                        <span class="sub-item">View Marks</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+                <a data-bs-toggle="collapse" href="#subjects">
+                <i class="fa-solid fa-book"></i>
+                  <p>Subjects</p>
+                  <span class="caret"></span>
+                </a>
+                <div class="collapse" id="subjects">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="subject.php">
+                        <span class="sub-item">Add Subject</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewsubject.php">
+                        <span class="sub-item">View Subjects</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="teachersubject.php">
+                        <span class="sub-item">Teacher Subject</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewteachersubject.php">
+                        <span class="sub-item">View Teacher Subject</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              <li class="nav-item">
+              <a data-bs-toggle="collapse" href="#shedule">
+              <i class="fa-regular fa-clock"></i>
+                  <p>Shedule</p>
+                  <span class="caret"></span>
+                  </a>
+                <div class="collapse" id="shedule">
+                  <ul class="nav nav-collapse">
+                    <li>
+                      <a href="hour.php">
+                        <span class="sub-item">Set Hour</span>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="viewhour.php">
+                        <span class="sub-item">View Hour</span>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <div class="main-panel">
+        <div class="main-header">
+          <div class="main-header-logo">
+            <!-- Logo Header -->
+            <div class="logo-header" data-background-color="dark">
+              <a href="index.php" class="logo">
+                <img
+                  src="assets/img/kaiadmin/logo_light.svg"
+                  alt="navbar brand"
+                  class="navbar-brand"
+                  height="20"
+                />
+              </a>
+              <div class="nav-toggle">
+                <button class="btn btn-toggle toggle-sidebar">
+                  <i class="gg-menu-right"></i>
+                </button>
+                <button class="btn btn-toggle sidenav-toggler">
+                  <i class="gg-menu-left"></i>
+                </button>
+              </div>
+              <button class="topbar-toggler more">
+                <i class="gg-more-vertical-alt"></i>
+              </button>
+            </div>
+            <!-- End Logo Header -->
+          </div>
+    <!--   Core JS Files   -->
+    <script src="assets/js/core/jquery-3.7.1.min.js"></script>
+    <script src="assets/js/core/popper.min.js"></script>
+    <script src="assets/js/core/bootstrap.min.js"></script>
+
+    <!-- jQuery Scrollbar -->
+    <script src="assets/js/plugin/jquery-scrollbar/jquery.scrollbar.min.js"></script>
+
+    <!-- Chart JS -->
+    <script src="assets/js/plugin/chart.js/chart.min.js"></script>
+
+    <!-- jQuery Sparkline -->
+    <script src="assets/js/plugin/jquery.sparkline/jquery.sparkline.min.js"></script>
+
+    <!-- Chart Circle -->
+    <script src="assets/js/plugin/chart-circle/circles.min.js"></script>
+
+    <!-- Datatables -->
+    <script src="assets/js/plugin/datatables/datatables.min.js"></script>
+
+    <!-- Bootstrap Notify -->
+    <script src="assets/js/plugin/bootstrap-notify/bootstrap-notify.min.js"></script>
+
+    <!-- jQuery Vector Maps -->
+    <script src="assets/js/plugin/jsvectormap/jsvectormap.min.js"></script>
+    <script src="assets/js/plugin/jsvectormap/world.js"></script>
+
+    <!-- Google Maps Plugin -->
+    <script src="assets/js/plugin/gmaps/gmaps.js"></script>
+
+    <!-- Sweet Alert -->
+    <script src="assets/js/plugin/sweetalert/sweetalert.min.js"></script>
+
+    <!-- Kaiadmin JS -->
+    <script src="assets/js/kaiadmin.min.js"></script>
+  </body>
+</html>
